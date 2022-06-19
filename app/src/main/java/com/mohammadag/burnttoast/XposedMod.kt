@@ -33,8 +33,8 @@ class XposedMod : IXposedHookZygoteInit {
                 view.layoutParams = params
                 val pm = context.packageManager
                 val imageView = ImageView(context)
-                imageView.maxHeight = view.height + 128
-                imageView.maxWidth = view.height + 128
+                imageView.maxHeight = view.height + 64
+                imageView.maxWidth = view.height + 64
                 imageView.adjustViewBounds = true
                 imageView.setImageDrawable(pm.getApplicationIcon(context.packageName))
                 val params1 = LinearLayout.LayoutParams(
